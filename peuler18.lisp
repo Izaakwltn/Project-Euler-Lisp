@@ -82,4 +82,6 @@
                                 process-pyramid))
                     (dynamic-pyramid (rest pyramid))))))
 
+(defun peuler18 ()
+    (dynamic-pyramid euler-pyramid))
 ;;;;-------------------------------------------------------------------------
