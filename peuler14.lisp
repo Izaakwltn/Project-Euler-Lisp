@@ -33,6 +33,6 @@
               finally (return big-collatz)))
 
 (defun peuler14 ()
-    (big-collatz-search 1000000))
+    (first (big-collatz-search 1000000)))
 
 ;;;;-------------------------------------------------------------------------
