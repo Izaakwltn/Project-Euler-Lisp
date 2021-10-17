@@ -1,11 +1,16 @@
+;;;;------------------------------------------------------------------------
 ;;;;Project Euler # 5
+;;;;------------------------------------------------------------------------
 
-;;;;2520 is the smallest number that can be divided by each of the numbers 
+(in-package :peuler)
 
-;;;;from 1 to 10 without any remainder.
+;;;;------------------------------------------------------------------------
+;;;2520 is the smallest number that can be divided by each of the numbers 
+;;;from 1 to 10 without any remainder.
 
-;;;;What is the smallest positive number that is evenly divisible by 
-;;;;all of the numbers from 1 to 20?
+;;;What is the smallest positive number that is evenly divisible by 
+;;;all of the numbers from 1 to 20?
+;;;;------------------------------------------------------------------------
 
 (defun divisiblep (n cap)
     (cond ((equal cap 1) t)
@@ -18,4 +23,6 @@
           (t (div-check (+ n 1) cap))))
 
 (defun peuler5 ()
-    (div-check 1 20))
+  (div-check 1 20))
+
+;;;;------------------------------------------------------------------------
