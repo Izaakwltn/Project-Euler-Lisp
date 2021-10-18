@@ -50,7 +50,8 @@
 
 (defun old-peuler7 ()
     (setq prime-list '(2 3 5 7))
-    (time (prime-finder 11)))
+  (time (prime-finder 11)))
+
 ;Evaluation took:
 ;  5.804 seconds of real time
  ; 5.802979 seconds of total run time (5.802979 user, 0.000000 system)
