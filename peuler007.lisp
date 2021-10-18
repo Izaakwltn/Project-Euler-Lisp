@@ -23,8 +23,14 @@
 	(t (prime-ladder (+ n 1) counter))))
 
 (defun peuler7 ()
-  (prime-ladder 2 0))
-  
+  (time (prime-ladder 2 0)))
+
+;Evaluation took:
+ ; 0.128 seconds of real time
+  ;0.128276 seconds of total run time (0.128276 user, 0.000000 system)
+  ;100.00% CPU
+  ;270,922,564 processor cycles
+  ;0 bytes consed
 
 ;;;;------------------------------------------------------------------------
 ;;;Old Version
@@ -44,6 +50,11 @@
 
 (defun old-peuler7 ()
     (setq prime-list '(2 3 5 7))
-    (prime-finder 11))
-
+    (time (prime-finder 11)))
+;Evaluation took:
+;  5.804 seconds of real time
+ ; 5.802979 seconds of total run time (5.802979 user, 0.000000 system)
+ ; 99.98% CPU
+ ; 12,256,466,802 processor cycles
+ ; 163,840 bytes consed
 ;;;;-------------------------------------------------------------------------
