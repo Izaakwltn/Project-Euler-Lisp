@@ -1,6 +1,6 @@
 ;;;;-------------------------------------------------------------------------
 ;;;;Project Euler # 28
-
+(in-package :peuler)
 ;;;;Starting with the number 1 and moving to the right in a 
 ;clockwise direction a 5 by 5 spiral is formed as follows:
 
@@ -24,5 +24,5 @@
             (t (+ n (spiralizer (+ n skip) skip (- counter 1))))))
 
 (defun peuler28 ()
-      (spiralizer 1 2 3))
+      (time (spiralizer 1 2 3)))
 ;----------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 ;;;;Project Euler #48
 ;;;;--------------------------------------------------------------------------
 ;;;;
-;
+(in-package :peuler)
 
 ;The series, 11 + 22 + 33 + ... + 1010 = 10405071317.
 ;Find the last ten digits of the series,11 + 22 + 33 + ... + 10001000.
@@ -19,6 +19,6 @@
         finally (return power-sum)))
 
 (defun peuler48 ()
- (reverse (subseq (reverse (write-to-string (power-play 1000))) 0 10)))
+ (time (reverse (subseq (reverse (write-to-string (power-play 1000))) 0 10))))
 
 

@@ -1,0 +1,136 @@
+;;;;-------------------------------------------------------------------------
+;;;;Project Euler #17
+;;;;-------------------------------------------------------------------------
+
+
+;;;;If the numbers 1 to 5 are written out in words: 
+;;;;one, two, three, four, five, 
+;;;;then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+
+;;;;If all the numbers from 1 to 1000 (one thousand) 
+;;;;inclusive were written out in words, how many letters would be used?
+
+;;;;NOTE: Do not count spaces or hyphens. 
+;;;;For example, 342 (three hundred and forty-two) 
+;;;;contains 23 letters and 115 (one hundred and fifteen) 
+;;;;contains 20 letters. 
+
+;;;;The use of "and" when writing out numbers is in compliance with British usage.
+;;;;-------------------------------------------------------------------------
+
+(defvar single-digits '(("1" "one")
+			("2" "two")
+			("3" "three")
+			("4" "four")
+			("5" "five")
+			("6" "six")
+			("7" "seven")
+			("8" "eight")
+			("9" "nine")))
+
+(defun parse_number (n)
+
+(defun number_to_words 
+
+;;;;actual words used: one-nine 
+                    (defvar single-digits (+ 3 3 5 4 4 3 5 5 4)) ;=> 36
+                ;;;; ten-nineteen 
+                    (defvar double-digits (+ 3 6 6 8 8 7 7 9 8 8)) ;=> 70
+
+                ;;;; twenty = 6, used in each hundred with each single digit
+                    (* 10 (+ 6 36)) ;=> 420 
+                
+                ;;;; thirty = 6
+                    (* 10 (+ 6 36)) ;=> 420
+
+                ;;;; forty = 5
+                    (* 10 (+ 5 36)) ;=> 410
+                
+                ;;;;fifty = 5
+                    (* 10 (+ 5 36)) ;=> 410
+
+                ;;;;sixty = 5
+                    (* 10 (+ 5 36)) ;=> 410
+                
+                ;;;;seventy = 7
+                    (* 10 (+ 7 36)) ;=> 430
+
+                ;;;;eighty = 6
+                    (* 10 (+ 6 36)) ;=> 420
+
+                ;;;;ninety = 6
+                    (* 10 (+ 6 36)) ;=> 420
+
+                ;total under 100:
+                    (+ 36 71 (* 3 410) (* 4 420) 430) ;=> 3446
+                
+                ;;;;hundred = 7
+                    ;;;;for each hundred using 1-9
+                    (+ 63 36) ;=> 99
+                ;;;each hundred has 
+                (defvar one-digit '(one two three four five six seven))
+                (defvar single-digit '(3 3 5 4 4 3 5 5 4))
+                ;;;one hundred and ;=> 13 (10 + single-digit)
+                (* (+ 10 n) 99)
+
+                (defun hundits ()
+                    (reduce #'+ (mapcar #'(lambda (n)
+					    (* 99 (+ 10 n)))
+					single-digit))) 
+
+                (defun hundits ()
+                    (* 99 (reduce #'+ (mapcar #'(lambda (n)
+                                                    (+ 10 n)) single-digit))))
+
+                so in total: 
+                ;singles,
+                (+ ( * 10 3447) (hundits)  )
+
+
+
+(defvar single-digits '((1 "one")
+                       (2 "two")
+                       (3 "three")
+                       (4 "four")
+                       (5 "five")
+                       (6 "six")
+                       (7 "seven")
+                       (8 "eight")
+                       (9 "nine")))
+
+(defvar double-digits '((10 "ten")
+                       (11 "eleven")
+                       (12 "twelve")
+                       (13 "thirteen")
+                       (14 "fourteen")
+                       (15 "fifteen")
+                       (16 "sixteen")
+                       (17 "seventeen")
+                       (18 "eighteen")
+                       (19 "nineteen")))
+
+(defvar tens '((20 "twenty")
+               (30 "thirty")
+               (40 "forty")
+               (50 "fifty")
+               (60 "sixty")
+               (70 "seventy")
+               (80 "eighty")
+               (90 "ninety")))
+;;run with (number-letter-adder 1 1000)
+(defun number-letter-adder (n max)
+    (cond ((> n max) (length "one thousand and"))
+          ((member n single-digits) 
+           (+ (length (second (assoc n single-digits))) (number-letter-adder (+ n 1) max)))
+          ((member n double-digits)
+           (+ (length (second (assoc n double-digits))) (number-letter-adder (+ n 1) max)))
+          ((member n tens)
+           (+ (* 10 (length (second (assoc n tens))))
+              ()))))
+
+()
+(member n tens) ;=> (+ (tens-operation n) (number-letter-adder (+ n 10)))
+(defun tens-operation (n)
+)
+(reduce #'+ (mapcar #'(lambda (entry)
+                (length (second entry))) tens))

@@ -2,8 +2,9 @@
 ;;;;Project Euler # 13 - Large Sum
 ;;;;------------------------------------------------------------------
 
+(in-package :peuler)
 
-
+;;;;------------------------------------------------------------------------
 ;;;;Work out the first ten digits of the sum of the 
 ;;;;following one-hundred 50-digit numbers.
 ;;;;------------------------------------------------------------------
@@ -120,4 +121,85 @@
     (subseq string-num 0 10))
 
 (defun peuler13 ()
-    (first-ten-digits (strung-sum-num big-number-list)))
+  (time (parse-integer (first-ten-digits (strung-sum-num big-number-list)))))
+
+;Evaluation took:
+;  0.000 seconds of real time
+;  0.000102 seconds of total run time (0.000100 user, 0.000002 system)
+;  100.00% CPU
+;  207,488 processor cycles
+;  10,160 bytes consed
+
+;;;;------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

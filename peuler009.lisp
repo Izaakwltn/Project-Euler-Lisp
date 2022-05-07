@@ -2,6 +2,10 @@
 ;;;;Project Euler # 8
 ;;;;------------------------------------------------------------------
 
+(in-package :peuler)
+
+;;;;------------------------------------------------------------------------
+
 ;;;;A Pythagorean triplet is a set of three natural numbers, 
 ;;;;a < b < c, for which,
 ;;;;a2 + b2 = c2
@@ -60,7 +64,9 @@
     (cond ((null xyz-list) nil)
           ((equal (+ (first (first xyz-list)) 
                      (second (first xyz-list))
-                     (third (first xyz-list))) 1000) (first xyz-list))
+                     (third (first xyz-list)))
+		  1000)
+	   (first xyz-list))
           (t (kilo-eval (rest xyz-list)))))
 
 (defun dickson-eval (r)
@@ -68,4 +74,12 @@
           (t (dickson-eval (+ r 2)))))
 
 (defun peuler9 ()
-    (reduce #'* (dickson-eval 2)))
+  (time (reduce #'* (dickson-eval 2))))
+
+;Evaluation took:
+;  0.015 seconds of real time
+;  0.014711 seconds of total run time (0.014648 user, 0.000063 system)
+;  100.00% CPU
+;  31,224,166 processor cycles
+;  98,304 bytes consed
+;;;;------------------------------------------------------------------------

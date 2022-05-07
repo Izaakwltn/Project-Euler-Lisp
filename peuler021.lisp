@@ -1,7 +1,7 @@
 ;;;;-------------------------------------------------------------------------
 ;;;;Project Euler #2 - Amicable numbers
 ;;;;-------------------------------------------------------------------------
-
+(in-package :peuler)
 ;;;;Let d(n) be defined as the sum of proper divisors of n 
 ;;;;(numbers less than n which divide evenly into n).
 ;;;;If d(a) = b and d(b) = a, where a ≠ b, then a and b are an amicable pair 
@@ -30,5 +30,5 @@
             finally (return amicable-sum)))
 
 (defun peuler21 ()
-    (amicable-numbers 9999))
+    (time (amicable-numbers 9999)))
 ;;;;-------------------------------------------------------------------------

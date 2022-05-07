@@ -1,7 +1,7 @@
 ;;;;-------------------------------------------------------------------------
 ;;;;Peuler30
 ;;;;-------------------------------------------------------------------------
-
+(in-package :peuler)
 ;;;;Surprisingly there are only three numbers 
 ;;;;that can be written as the sum of fourth powers of their digits:
 
@@ -32,5 +32,5 @@
           (t (power-number-finder (+ n 1)))))
 
 (defun peuler30 ()
-    (power-number-finder 2))
+    (time (power-number-finder 2)))
 ;;;;-------------------------------------------------------------------------

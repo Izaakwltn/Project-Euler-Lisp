@@ -2,6 +2,9 @@
 ;;;;Project Euler # 11
 ;;;;------------------------------------------------------------------
 
+(in-package :peuler)
+
+;;;;------------------------------------------------------------------------
 ;;;;In the 20×20 grid below, 
 ;;;;four numbers along a diagonal line have been marked in red.
 
@@ -63,7 +66,8 @@
           ((> (* (first numlist)
                  (second numlist)
                  (third numlist)
-                 (fourth numlist)) big-product)
+                 (fourth numlist))
+	      big-product)
            (progn (setq big-product (* (first numlist)
                                      (second numlist)
                                      (third numlist)
@@ -127,11 +131,22 @@
                     (forward-diag (rest matrix))))))
 
 ;;;;now for the whole thing:
+(defun peuler11-work ()
+  (setq big-product 0)
+  (horizontal grid-list)
+  (vertical grid-list)
+  (back-diag grid-list)
+  (forward-diag grid-list)
+  big-product)
+
 (defun peuler11 ()
-      (horizontal grid-list)
-      (vertical grid-list)
-      (back-diag grid-list)
-      (forward-diag grid-list)
-      big-product)
+  (time (peuler11-work)))
+
+;Evaluation took:
+;  0.000 seconds of real time
+;  0.000155 seconds of total run time (0.000155 user, 0.000000 system)
+;  100.00% CPU
+;  319,232 processor cycles
+;  0 bytes consed
 
 ;;;;-------------------------------------------------------------------------

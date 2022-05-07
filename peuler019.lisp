@@ -1,7 +1,7 @@
 ;;;;--------------------------------------------------------------------------
 ;;;;Project Euler #19
 ;;;;--------------------------------------------------------------------------
-
+(in-package :peuler)
 ;You are given the following information,
 ;but you may prefer to do some research for yourself.
 
@@ -41,6 +41,6 @@
 
 
 (defun peuler19 ()
-  (time-cycle 366 1901))
+  (time (time-cycle 366 1901)))
 
 ;;;;--------------------------------------------------------------------------

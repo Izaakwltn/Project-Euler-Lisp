@@ -2,7 +2,7 @@
 ;;;;Project Euler #18
 ;;;;-------------------------------------------------------------------------
 
-
+(in-package :peuler)
 ;By starting at the top of the triangle below and 
 ;moving to adjacent numbers on the row below, 
 ;the maximum total from top to bottom is 23.
@@ -83,5 +83,5 @@
                     (dynamic-pyramid (rest pyramid))))))
 
 (defun peuler18 ()
-    (dynamic-pyramid euler-pyramid))
+    (time (dynamic-pyramid euler-pyramid)))
 ;;;;-------------------------------------------------------------------------

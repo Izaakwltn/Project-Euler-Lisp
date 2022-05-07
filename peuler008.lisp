@@ -1,6 +1,10 @@
 ;;;;------------------------------------------------------------------
 ;;;;Project Euler # 8
 ;;;;------------------------------------------------------------------
+
+(in-package :peuler)
+
+;;;;------------------------------------------------------------------------
 ;;;;The four adjacent digits in the 1000-digit number 
 ;;;;that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 
@@ -41,4 +45,12 @@
           (t (adj-finder (rest num-list)))))
 
 (defun peuler8 ()
-    (adj-finder (digit-listify bbn)))
+  (time (adj-finder (digit-listify bbn))))
+
+;Evaluation took:
+;  0.006 seconds of real time
+;  0.005632 seconds of total run time (0.001675 user, 0.003957 system)
+;  100.00% CPU
+;  11,883,400 processor cycles
+;  585,248 bytes consed
+;;;;------------------------------------------------------------------------

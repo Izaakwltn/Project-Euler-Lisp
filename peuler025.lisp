@@ -1,7 +1,7 @@
 ;;;;--------------------------------------------------------------------------
 ;;;;Project Euler #25
 ;;;;--------------------------------------------------------------------------
-
+(in-package :peuler)
 ;The Fibonacci sequence is defined by the recurrence relation:
 
 ;    Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
@@ -38,6 +38,6 @@
 		  (fib-climb (+ oldfib2 fib) (+ counter 1) max-digits)))))
 
 (defun peuler25 ()
-  (fib-climb 2 3 1000))
+  (time (fib-climb 2 3 1000)))
 
 ;;;;--------------------------------------------------------------------------

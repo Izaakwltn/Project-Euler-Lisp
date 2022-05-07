@@ -2,7 +2,7 @@
 ;;;;Project Euler #47
 ;;;;--------------------------------------------------------------------------
 ;;;;
-;
+(in-package :peuler)
 
 ;The first two consecutive numbers to have two distinct prime factors are:
 
@@ -38,5 +38,5 @@
 	(t (connect-four (+ n 1) 0))))
 
 (defun peuler47 ()
-  (connect-four 210 0))
+  (time (connect-four 210 0)))
 ;;;;--------------------------------------------------------------------------	     

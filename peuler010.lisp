@@ -2,6 +2,9 @@
 ;;;;Project Euler # 10
 ;;;;------------------------------------------------------------------
 
+(in-package :peuler)
+
+;;;;------------------------------------------------------------------------
 ;;;;The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 
 ;;;;Find the sum of all the primes below two million.
@@ -29,6 +32,13 @@
         finally (return sieve-sum)))
 
 (defun peuler10 ()
-    (sieve-it sieve-list))
+  (time (sieve-it sieve-list)))
+
+;Evaluation took:
+;  5.945 seconds of real time
+;  5.944691 seconds of total run time (5.944691 user, 0.000000 system)
+;  100.00% CPU
+;  12,555,901,186 processor cycles
+;  0 bytes consed
 
 ;;;;-------------------------------------------------------------------------

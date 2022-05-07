@@ -2,6 +2,9 @@
 ;;;;Project Euler # 11
 ;;;;------------------------------------------------------------------
 
+(in-package :peuler)
+
+;;;;------------------------------------------------------------------------
 ;The following iterative sequence is defined for the set of positive integers:
 
 ;n → n/2 (n is even)
@@ -33,6 +36,15 @@
               finally (return big-collatz)))
 
 (defun peuler14 ()
-    (first (big-collatz-search 1000000)))
+  (setq big-collatz '(1 1))
+  (time (first (big-collatz-search 1000000))))
+
+;Evaluation took:
+;  3.572 seconds of real time
+;  3.588940 seconds of total run time (3.556570 user, 0.032370 system)
+;  [ Run times consist of 0.163 seconds GC time, and 3.426 seconds non-GC time. ]
+;  100.48% CPU
+;  7,544,448,272 processor cycles
+;  2,103,108,672 bytes consed
 
 ;;;;-------------------------------------------------------------------------
