@@ -36,11 +36,4 @@
 
 (defun old-peuler1 ()
   (time (mult-three-five 999)))
-;Evaluation took:
-;  0.000 seconds of real time
-;  0.000282 seconds of total run time (0.000264 user, 0.000018 system)
-;  100.00% CPU
-;  588,632 processor cycles
-;  0 bytes consed
-
 ;;;;------------------------------------------------------------------------

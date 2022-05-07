@@ -47,5 +47,3 @@
 	       (:file "peuler047")
 	       (:file "peuler048")
 	       (:file "peuler050")))
-	       ;))
-					;(:file "peuler004")))

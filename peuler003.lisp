@@ -10,7 +10,6 @@
 ;;What is the largest prime factor of the number 600851475143 ?
 ;;;;-------------------------------------------------------------------------
 
-
 (defun prime-factor-search (num)
   (loop :with sqrt-num := (+ 1 (round (sqrt num)))
 	
@@ -48,12 +47,12 @@
            (setq prime-list (append prime-list (list n)))
            (prime-fact-backend (+ n 2) max))
           ((prime-sift n) (setq prime-list (append prime-list (list n)))
-                          (prime-fact-backend (+ n 2) max))
-          (t (prime-fact-backend (+ n 2) max))))
+	   (prime-fact-backend (+ n 2) max))
+	  (t (prime-fact-backend (+ n 2) max))))
 
 (defun prime-fact (max)
-    (setq prime-list '(2 3 5 7))
-    (prime-fact-backend 3 max))
+(setq prime-list '(2 3 5 7))
+(prime-fact-backend 3 max))
 
 (defun old-peuler3 ()
     (prime-fact 775147))

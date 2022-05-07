@@ -32,11 +32,4 @@
 
 (defun peuler2 ()
   (time (even-fib-squash 0 4000000)))
-
-;Evaluation took:
-;  0.261 seconds of real time
-;  0.261171 seconds of total run time (0.261171 user, 0.000000 system)
-;  100.00% CPU
-;  551,628,866 processor cycles
-;  0 bytes consed
 ;;;;-----------------------------------------------------------------------

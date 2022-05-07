@@ -31,7 +31,7 @@
 
 (defvar oldfib2 1) ; 1 2 3 
 
-(defun fib-climb (fib counter max-digits ) ;(2 3 1000)
+(defun fib-climb (fib counter max-digits) ;(2 3 1000)
   (cond ((equal (length (write-to-string fib)) max-digits) counter)
 	(t (progn (setq oldfib2 oldfib1)
 		  (setq oldfib1 fib)
