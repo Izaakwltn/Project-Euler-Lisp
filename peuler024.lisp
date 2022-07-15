@@ -32,7 +32,7 @@
 	       (subseq numstring (+ mth 1) (length numstring))))
 
 ;0 1 2, 0 2 1, 
-(defun permutation-backend (numlist nth-value mth-value)
+(defun permutation-backend (rev-numlist nth-value mth-value)
   (cond ((null numlist) (list nth-value mth-value))
 	((> (second numlist) (first numlist))
 	 (

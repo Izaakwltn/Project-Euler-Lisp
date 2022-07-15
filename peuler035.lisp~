@@ -1,0 +1,15 @@
+;;;; peuler035.lisp
+;;;;
+;;;;
+
+(in-package :peuler)
+
+;;; circular primes (197 971 719) all rotations are prime
+
+(defun rotate-num (n)
+  (let ((numstring (write-to-string n)))
+    (loop :with num := 0
+      :for i :from 1 :to (length numstring)
+	  :do (setq num (parse-integer (concatenate 'string (subseq numstring 1) (subseq numstring 0 1))))
+	  :collect num :into rotations
+      :finally (return rotations))))

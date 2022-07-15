@@ -1,0 +1,23 @@
+;;;; peuler032.lisp
+;;;;
+;;;;
+
+(in-package :peuler)
+
+;;; pan-digital products
+
+;;; 39 * 186 = 7254
+
+;;;
+
+(defun parse-digits (n)
+  (let ((numstring (write-to-string n)))
+    (loop :for i :from 1 :to (length numstring)
+	  :collect (parse-integer (subseq numstring (- i 1) i)))))
+
+(defun pandigital-p (x y product)
+  (
+
+(loop :for i :from 1 :to 999
+      :do (loop :for j :from 1 :to 99
+		:
