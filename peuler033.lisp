@@ -15,13 +15,6 @@
     (loop :for i :from 1 :to (length numstring)
 	  :collect (parse-integer (subseq numstring (- i 1) i)))))
 
-;(defun cancel-out (numerator denominator)
- ; (let ((num (parse-digits numerator))
-;	(den (parse-digits denominator)))
- ;   (eq 3 (length (union num den)))
-;	(set-difference (append num den) (union num den))
-					;	nil)))
-
 (defun avoids-zero (cancelled-list)
   (not (member 0 cancelled-list)))
 

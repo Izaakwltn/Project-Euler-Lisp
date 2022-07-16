@@ -1,0 +1,19 @@
+;;;; peuler037.lisp
+;;;;
+;;;;
+
+(in-package :peuler)
+
+;;; Truncatable primes
+
+;;; 3797 -> 797 -> 97 -> 7 all primes, also 379 -> 37 -> 3
+
+;;; There are exactly 11 of these
+
+(defun truncatable-backend (numstring)
+  (cond ((zerop (length numstring)) t)
+	((primep (parse-integer numstring))
+	 (truncatable-backend (subseq numstring 1)))
+	(t nil)))
+(defun truncatable-b (n)
+  

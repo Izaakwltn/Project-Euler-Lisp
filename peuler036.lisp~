@@ -1,0 +1,16 @@
+;;;; peuler036.lisp
+;;;;
+;;;;
+
+(in-package :peuler)
+
+(defvar binary-digit-places (loop :for i :from 0 :to 19
+				  :collect (power 2 i)))
+  / 2, save remainder
+(defun dec-binstring-backend (numstring x)
+  (
+   
+(defun dec-binstring (n)
+  (cond ((zerop n) "")
+	(t (concatenate 'string (mod n 2)
+			(dec-binstring (/ n 2))))))
