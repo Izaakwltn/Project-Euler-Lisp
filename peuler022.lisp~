@@ -1,0 +1,40 @@
+;;;; peuler022.lisp
+;;;;
+;;;;
+
+(in-package :peuler)
+
+;;;names scores
+;;; parse names from txt file into names list
+;;; alphabetical sort
+
+;;;calculate alphabetical value for each name
+
+(defun scrape-name-file ()
+  (uiop:read-file-string (asdf:system-relative-pathname "Project-Euler-Lisp" "/p022_names.txt")))
+  
+(defun parse-names (name-list-string) ;format "name","name"
+  (loop :with current-name := ""
+	:with name-list := nil
+	:for i :from 1 :to (length name-list-string)
+	:if (and (string-equal (subseq name-list-string (- i 1) i) "\"")
+		 (not (string-equal current-name "")))
+	  :do (progn (setq name-list (cons current-name name-list))
+		     (setq current-name ""))
+	:else :do (setq current-name (concatenate 'string (subseq name-list-string (- i 1) i)))
+	:finally (return name-list)))
+
+(defun parse-names (name-list-string current-word)
+  (cond ((string-equal name-list-string "") nil)
+	((string-equal name-list-string ",")
+	 (cons current-word
+	       (parse-names (subseq name-list-string 1) "")))
+	(t (parse-names (subseq name-list-string 1)
+			(concatenate 'string (subseq name-list-string 0 1) (parse-names
+  
+	   
+   
+
+  
+(defun scrape-names ()
+  (with-open-file (stream "p022_names.txt" :direction :input
