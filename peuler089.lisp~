@@ -1,0 +1,10 @@
+;;;; Project euler #89
+;;;; peuler089.lisp
+;;;;
+;;;; Izaak Walton
+
+(in-package :peuler)
+
+(defun parse-numerals ()
+  (uiop:read-file-lines
+   (asdf:system-relative-pathname "peuler" "p089_roman.txt")))
