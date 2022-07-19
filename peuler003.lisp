@@ -1,14 +1,12 @@
-;;;;-------------------------------------------------------------------------
-;;;;Project Euler # 3
-;;;;-------------------------------------------------------------------------
+;;;; Project Euler # 3 peuler003.lisp
+;;;;
+;;;; Izaak Walton
 
 (in-package :peuler)
 
-;;;;------------------------------------------------------------------------
-;;The prime factors of 13195 are 5, 7, 13 and 29.
+;;; The prime factors of 13195 are 5, 7, 13 and 29.
 
-;;What is the largest prime factor of the number 600851475143 ?
-;;;;-------------------------------------------------------------------------
+;;; What is the largest prime factor of the number 600851475143 ?
 
 (defun prime-factor-search (num)
   (loop :with sqrt-num := (+ 1 (round (sqrt num)))
@@ -27,8 +25,8 @@
  ; 100.00% CPU
  ; 31,356,894 processor cycles
  ; 0 bytes consed
-	
-;;;;------------------------------------------------------------------------
+
+
 ;;;old, slow  Dinosaur version
 
 (defvar prime-list '(2 3 5 7))
@@ -56,5 +54,3 @@
 
 (defun old-peuler3 ()
     (prime-fact 775147))
-
-;;;;-------------------------------------------------------------------------

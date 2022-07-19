@@ -1,6 +1,7 @@
+;;;; Project Euler #22
 ;;;; peuler022.lisp
 ;;;;
-;;;;
+;;;; Izaak Walton
 
 (in-package :peuler)
 
