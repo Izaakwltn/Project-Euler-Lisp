@@ -1,16 +1,15 @@
-;;;;-------------------------------------------------------------------------
-;;;;Project Euler # 7
-;;;;-------------------------------------------------------------------------
+;;;; Project Euler # 7
+;;;; peuler007.lisp
+;;;;
+;;;; Copyright Izaak Walton (c) 2022
 
 (in-package :peuler)
 
-;;;;------------------------------------------------------------------------
-;;;;By listing the first six prime numbers: 
-;;;;2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+;;; By listing the first six prime numbers: 
+;;; 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 
-;;;;What is the 10,001st prime number?
+;;; What is the 10,001st prime number?
 
-;;;;-------------------------------------------------------------------------
 (defun primep (n)
   (loop for i from 2 to (sqrt n)
 	if (zerop (mod n i))
@@ -32,8 +31,7 @@
   ;270,922,564 processor cycles
   ;0 bytes consed
 
-;;;;------------------------------------------------------------------------
-;;;Old Version
+;;; Old Version
 
 (defvar prime-list '(2 3 5 7))
 
@@ -58,4 +56,3 @@
  ; 99.98% CPU
  ; 12,256,466,802 processor cycles
  ; 163,840 bytes consed
-;;;;-------------------------------------------------------------------------

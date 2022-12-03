@@ -1,23 +1,20 @@
-;;;;------------------------------------------------------------------
-;;;;Project Euler # 8
-;;;;------------------------------------------------------------------
+;;;; Project Euler #8
+;;;; peuler008.lisp
+;;;;
+;;;; Izaak Walton
 
 (in-package :peuler)
 
-;;;;------------------------------------------------------------------------
+;;; A Pythagorean triplet is a set of three natural numbers, 
+;;; a < b < c, for which,
+;;; a2 + b2 = c2
 
-;;;;A Pythagorean triplet is a set of three natural numbers, 
-;;;;a < b < c, for which,
-;;;;a2 + b2 = c2
+;;; For example, 32 + 42 = 9 + 16 = 25 = 52.
 
-;;;;For example, 32 + 42 = 9 + 16 = 25 = 52.
+;;; There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+;;; Find the product abc.
 
-;;;;There exists exactly one Pythagorean triplet for which a + b + c = 1000.
-;;;;Find the product abc.
-
-;;;;-------------------------------------------------------------------------
-
-;;;;Using the Dickson Method!
+;;;Using the Dickson Method!
 
 (defun first-nth (n list)
     (cond ((zerop n) nil)
@@ -42,9 +39,9 @@
 (defun fact-triples (r)
     (make-triples r (first-half (find-fact (/ (* r r) 2)))))
 
-;;X^2 + y^2 = Z^2
-;;x = r + s, y = r + t, z = r + s + t
-;;x = r + (first )
+;;; X^2 + y^2 = Z^2
+;;; x = r + s, y = r + t, z = r + s + t
+;;; x = r + (first )
 
 (defun xyz-convert (triples-list)
     (cond ((null triples-list) nil)
@@ -82,4 +79,3 @@
 ;  100.00% CPU
 ;  31,224,166 processor cycles
 ;  98,304 bytes consed
-;;;;------------------------------------------------------------------------

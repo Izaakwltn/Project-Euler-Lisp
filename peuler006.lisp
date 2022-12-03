@@ -1,23 +1,22 @@
-;;;;-----------------------------------------------------------------------
-;;;;Project Euler # 6
-;;;;-----------------------------------------------------------------------
+;;;; Project Euler # 6
+;;;; peuler006.lisp
+;;;;
+;;;; Copyright Izaak Walton (c) 2021-2022
 
 (in-package :peuler)
 
-;;;;------------------------------------------------------------------------
-;;;The sum of the squares of the first ten natural numbers is,
-;;;1^2 + 2^2 + ... + 10^2 = 385
+;;; The sum of the squares of the first ten natural numbers is,
+;;; 1^2 + 2^2 + ... + 10^2 = 385
 
-;;;The square of the sum of the first ten natural numbers is,
-;;;(1 + 2 + ... + 10)^2 = 2035
+;;; The square of the sum of the first ten natural numbers is,
+;;; (1 + 2 + ... + 10)^2 = 2035
 
-;;;Hence the difference between the sum of the squares 
-;;;of the first ten natural numbers and the square of the sum is
-;;;3025 - 385 = 2640
+;;; Hence the difference between the sum of the squares 
+;;; of the first ten natural numbers and the square of the sum is
+;;; 3025 - 385 = 2640
 
-;;;Find the difference between the sum of the squares of the 
-;;;first one hundred natural numbers and the square of the sum.
-;;;;-----------------------------------------------------------------------
+;;; Find the difference between the sum of the squares of the 
+;;; first one hundred natural numbers and the square of the sum.
 
 (defun sum-square (n)
     (cond ((zerop n) 0)
@@ -39,4 +38,3 @@
 ;  100.00% CPU
 ;  54,104 processor cycles
 ;  0 bytes consed
-;;;;------------------------------------------------------------------------

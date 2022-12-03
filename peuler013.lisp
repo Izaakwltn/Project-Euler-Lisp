@@ -1,13 +1,13 @@
-;;;;------------------------------------------------------------------
-;;;;Project Euler # 13 - Large Sum
-;;;;------------------------------------------------------------------
+;;;; Project Euler #13
+;;;; peuler013.lisp
+;;;;
+;;;; Izaak Walton
+
 
 (in-package :peuler)
 
-;;;;------------------------------------------------------------------------
-;;;;Work out the first ten digits of the sum of the 
-;;;;following one-hundred 50-digit numbers.
-;;;;------------------------------------------------------------------
+;;; Work out the first ten digits of the sum of the 
+;;; following one-hundred 50-digit numbers.
 
 (defvar big-number-list 
 '(37107287533902102798797998220837590246510135740250
@@ -111,9 +111,8 @@
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690))
 
-;;;;-------------------------------------------------------------------------
+;;; easiest solution, may find a more complicated option later:
 
-;;;;;;easiest solution, may find a more complicated option later:
 (defun strung-sum-num (num-list)
     (write-to-string (reduce #'+ num-list)))
 
@@ -129,9 +128,6 @@
 ;  100.00% CPU
 ;  207,488 processor cycles
 ;  10,160 bytes consed
-
-;;;;------------------------------------------------------------------------
-
 
 
 

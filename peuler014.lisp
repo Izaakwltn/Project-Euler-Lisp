@@ -1,26 +1,26 @@
-;;;;------------------------------------------------------------------
-;;;;Project Euler # 11
-;;;;------------------------------------------------------------------
+;;;;Project Euler # 14
+;;;; peuler014
+;;;; 
+;;;; Izaak Walton
+
 
 (in-package :peuler)
 
-;;;;------------------------------------------------------------------------
-;The following iterative sequence is defined for the set of positive integers:
+;;; The following iterative sequence is defined for the set of positive integers:
 
-;n → n/2 (n is even)
-;n → 3n + 1 (n is odd)
+;;; n → n/2 (n is even)
+;;; n → 3n + 1 (n is odd)
 
-;Using the rule above and starting with 13, we generate the following sequence:
-;13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+;;; Using the rule above and starting with 13, we generate the following sequence:
+;;; 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
 
-;It can be seen that this sequence (starting at 13 and finishing at 1) 
-;contains 10 terms. Although it has not been proved yet (Collatz Problem), 
-;it is thought that all starting numbers finish at 1.
+;;; It can be seen that this sequence (starting at 13 and finishing at 1) 
+;;; contains 10 terms. Although it has not been proved yet (Collatz Problem), 
+;;; it is thought that all starting numbers finish at 1.
 
-;Which starting number, under one million, produces the longest chain?
+;;; Which starting number, under one million, produces the longest chain?
 
-;NOTE: Once the chain starts the terms are allowed to go above one million.
-;;;;------------------------------------------------------------------
+;;;NOTE: Once the chain starts the terms are allowed to go above one million.
 
 (defun collatz (n)
     (cond ((equal n 1) nil)
@@ -46,5 +46,3 @@
 ;  100.48% CPU
 ;  7,544,448,272 processor cycles
 ;  2,103,108,672 bytes consed
-
-;;;;-------------------------------------------------------------------------
